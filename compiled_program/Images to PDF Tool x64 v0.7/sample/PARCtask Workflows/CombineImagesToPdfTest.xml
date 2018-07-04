@@ -1,0 +1,236 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DesignerWorkflow z:Id="i1" i:type="DesignerWorkflow" xmlns="http://schemas.datacontract.org/2004/07/PARCtask.Model.Configuration" xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns:z="http://schemas.microsoft.com/2003/10/Serialization/">
+  <Breakpoints />
+  <Description>Try to combine images into a pdf file (uses custom exe)</Description>
+  <ExecutionTimeoutMs>300000</ExecutionTimeoutMs>
+  <ImportDefinitions />
+  <IsEnabledOnServer>true</IsEnabledOnServer>
+  <PARCViewIsActive>false</PARCViewIsActive>
+  <ServerNotifyOnSave_WasDeleted>false</ServerNotifyOnSave_WasDeleted>
+  <ServerNotifyOnSave_WasNew>false</ServerNotifyOnSave_WasNew>
+  <ShouldContinueOnException>false</ShouldContinueOnException>
+  <Template i:nil="true" />
+  <Title>CombineImagesToPdfTest</Title>
+  <Triggers>
+    <Trigger z:Id="i2" i:type="Trigger">
+      <Description i:nil="true" />
+      <DisableOnUtc i:nil="true" />
+      <EnableOnUtc i:nil="true" />
+      <IsDeleteOnExpiration>false</IsDeleteOnExpiration>
+      <IsEnabledOnServer>true</IsEnabledOnServer>
+      <Name>ExecuteOnceAtTimeTrigger1</Name>
+      <ServerNotifyOnSave_WasDeleted>false</ServerNotifyOnSave_WasDeleted>
+      <ServerNotifyOnSave_WasNew>false</ServerNotifyOnSave_WasNew>
+      <SortOrder>0</SortOrder>
+      <TriggerParameters>
+        <TriggerParameter z:Id="i3" i:type="TriggerParameter">
+          <Description i:nil="true" />
+          <Name>ExecuteAtTime</Name>
+          <ParameterConversionProcessId>10</ParameterConversionProcessId>
+          <ParameterEditorTypeId>8</ParameterEditorTypeId>
+          <ParameterSourceTypeId>1</ParameterSourceTypeId>
+          <ParameterTypeId>5</ParameterTypeId>
+          <SortOrder>0</SortOrder>
+          <Value>2018-07-03 18:06:02.000</Value>
+          <DirectionValue>1</DirectionValue>
+          <IsRequired>true</IsRequired>
+          <Trigger z:Ref="i2" />
+          <TriggerParameterTemplateId>400</TriggerParameterTemplateId>
+        </TriggerParameter>
+      </TriggerParameters>
+      <TriggerTypeId>1</TriggerTypeId>
+      <Workflow z:Ref="i1" />
+      <WorkflowParameterOverrides />
+    </Trigger>
+  </Triggers>
+  <TriggersRowHeight>200</TriggersRowHeight>
+  <UsingStatements />
+  <WorkflowParameters>
+    <WorkflowParameter z:Id="i4" i:type="WorkflowParameter">
+      <Description>Runtime value containing the time when trigger was scheduled to fire. Read-only.</Description>
+      <Name>ScheduledToFireOn</Name>
+      <ParameterConversionProcessId>10</ParameterConversionProcessId>
+      <ParameterEditorTypeId>8</ParameterEditorTypeId>
+      <ParameterSourceTypeId>1</ParameterSourceTypeId>
+      <ParameterTypeId>5</ParameterTypeId>
+      <SortOrder>0</SortOrder>
+      <Value i:nil="true" />
+      <PARCViewIsActive>false</PARCViewIsActive>
+      <PARCViewIsRequired>false</PARCViewIsRequired>
+      <PARCViewPrompt i:nil="true" />
+      <Workflow z:Ref="i1" />
+      <WorkflowParameterTemplateId>500</WorkflowParameterTemplateId>
+    </WorkflowParameter>
+    <WorkflowParameter z:Id="i5" i:type="WorkflowParameter">
+      <Description>Runtime value containing the time when trigger fired. Read-only.</Description>
+      <Name>FiredOn</Name>
+      <ParameterConversionProcessId>10</ParameterConversionProcessId>
+      <ParameterEditorTypeId>8</ParameterEditorTypeId>
+      <ParameterSourceTypeId>1</ParameterSourceTypeId>
+      <ParameterTypeId>5</ParameterTypeId>
+      <SortOrder>1</SortOrder>
+      <Value i:nil="true" />
+      <PARCViewIsActive>false</PARCViewIsActive>
+      <PARCViewIsRequired>false</PARCViewIsRequired>
+      <PARCViewPrompt i:nil="true" />
+      <Workflow z:Ref="i1" />
+      <WorkflowParameterTemplateId>501</WorkflowParameterTemplateId>
+    </WorkflowParameter>
+    <WorkflowParameter z:Id="i6" i:type="WorkflowParameter">
+      <Description i:nil="true" />
+      <Name>OutputFilePath</Name>
+      <ParameterConversionProcessId>1</ParameterConversionProcessId>
+      <ParameterEditorTypeId>8</ParameterEditorTypeId>
+      <ParameterSourceTypeId>1</ParameterSourceTypeId>
+      <ParameterTypeId>3</ParameterTypeId>
+      <SortOrder>2</SortOrder>
+      <Value>D:\Test\Img2Pdf\images.pdf</Value>
+      <PARCViewIsActive>false</PARCViewIsActive>
+      <PARCViewIsRequired>false</PARCViewIsRequired>
+      <PARCViewPrompt i:nil="true" />
+      <Workflow z:Ref="i1" />
+      <WorkflowParameterTemplateId i:nil="true" />
+    </WorkflowParameter>
+    <WorkflowParameter z:Id="i7" i:type="WorkflowParameter">
+      <Description i:nil="true" />
+      <Name>FolderWithImages</Name>
+      <ParameterConversionProcessId>1</ParameterConversionProcessId>
+      <ParameterEditorTypeId>8</ParameterEditorTypeId>
+      <ParameterSourceTypeId>1</ParameterSourceTypeId>
+      <ParameterTypeId>3</ParameterTypeId>
+      <SortOrder>3</SortOrder>
+      <Value>D:\Test\Img2Pdf\Images</Value>
+      <PARCViewIsActive>false</PARCViewIsActive>
+      <PARCViewIsRequired>false</PARCViewIsRequired>
+      <PARCViewPrompt i:nil="true" />
+      <Workflow z:Ref="i1" />
+      <WorkflowParameterTemplateId i:nil="true" />
+    </WorkflowParameter>
+    <WorkflowParameter z:Id="i8" i:type="WorkflowParameter">
+      <Description i:nil="true" />
+      <Name>ExeFolder</Name>
+      <ParameterConversionProcessId>1</ParameterConversionProcessId>
+      <ParameterEditorTypeId>8</ParameterEditorTypeId>
+      <ParameterSourceTypeId>1</ParameterSourceTypeId>
+      <ParameterTypeId>3</ParameterTypeId>
+      <SortOrder>4</SortOrder>
+      <Value>D:\Python\Image 2 PDF\Images to PDF Tool x64 v0.7</Value>
+      <PARCViewIsActive>false</PARCViewIsActive>
+      <PARCViewIsRequired>false</PARCViewIsRequired>
+      <PARCViewPrompt i:nil="true" />
+      <Workflow z:Ref="i1" />
+      <WorkflowParameterTemplateId i:nil="true" />
+    </WorkflowParameter>
+    <WorkflowParameter z:Id="i9" i:type="WorkflowParameter">
+      <Description i:nil="true" />
+      <Name>ExeName</Name>
+      <ParameterConversionProcessId>1</ParameterConversionProcessId>
+      <ParameterEditorTypeId>8</ParameterEditorTypeId>
+      <ParameterSourceTypeId>1</ParameterSourceTypeId>
+      <ParameterTypeId>3</ParameterTypeId>
+      <SortOrder>5</SortOrder>
+      <Value>images_to_pdf.exe</Value>
+      <PARCViewIsActive>false</PARCViewIsActive>
+      <PARCViewIsRequired>false</PARCViewIsRequired>
+      <PARCViewPrompt i:nil="true" />
+      <Workflow z:Ref="i1" />
+      <WorkflowParameterTemplateId i:nil="true" />
+    </WorkflowParameter>
+    <WorkflowParameter z:Id="i10" i:type="WorkflowParameter">
+      <Description i:nil="true" />
+      <Name>CommandLineParameters</Name>
+      <ParameterConversionProcessId>1</ParameterConversionProcessId>
+      <ParameterEditorTypeId>8</ParameterEditorTypeId>
+      <ParameterSourceTypeId>1</ParameterSourceTypeId>
+      <ParameterTypeId>3</ParameterTypeId>
+      <SortOrder>6</SortOrder>
+      <Value i:nil="true" />
+      <PARCViewIsActive>false</PARCViewIsActive>
+      <PARCViewIsRequired>false</PARCViewIsRequired>
+      <PARCViewPrompt i:nil="true" />
+      <Workflow z:Ref="i1" />
+      <WorkflowParameterTemplateId i:nil="true" />
+    </WorkflowParameter>
+  </WorkflowParameters>
+  <AllSteps>
+    <Step z:Id="i11" i:type="Step">
+      <Description>launch process</Description>
+      <Designer z:Ref="i1" />
+      <Name>ScriptStep1</Name>
+      <SortOrder>1</SortOrder>
+      <StepParameters>
+        <StepParameter z:Id="i12" i:type="StepParameter">
+          <Description i:nil="true" />
+          <Name>ScriptCode</Name>
+          <ParameterConversionProcessId>1</ParameterConversionProcessId>
+          <ParameterEditorTypeId>5</ParameterEditorTypeId>
+          <ParameterSourceTypeId>1</ParameterSourceTypeId>
+          <ParameterTypeId>3</ParameterTypeId>
+          <SortOrder>0</SortOrder>
+          <Value>
+
+Dim process As New System.Diagnostics.Process
+Dim sArg As String
+Dim sPathFinal As String
+
+
+sArg = CommandLineParameters 
+'sArg += " """ &amp; sFile &amp; """ /e"  ' /e suppresses splash screen
+
+process.StartInfo.WorkingDirectory = ExeFolder
+process.StartInfo.FileName = ExeName                    
+process.StartInfo.Arguments = sArg
+process.StartInfo.CreateNoWindow = True 'Toggle this false when testing initially
+process.StartInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden
+process.Start()</Value>
+          <DirectionValue>1</DirectionValue>
+          <IsRequired>true</IsRequired>
+          <Step z:Ref="i11" />
+          <StepParameterTemplateId>130</StepParameterTemplateId>
+          <WorkflowParameter i:nil="true" />
+        </StepParameter>
+      </StepParameters>
+      <StepTypeId>15</StepTypeId>
+      <Steps />
+    </Step>
+    <Step z:Id="i13" i:type="Step">
+      <Description>set command line args for files</Description>
+      <Designer z:Ref="i1" />
+      <Name>ScriptStep2</Name>
+      <SortOrder>0</SortOrder>
+      <StepParameters>
+        <StepParameter z:Id="i14" i:type="StepParameter">
+          <Description i:nil="true" />
+          <Name>ScriptCode</Name>
+          <ParameterConversionProcessId>1</ParameterConversionProcessId>
+          <ParameterEditorTypeId>5</ParameterEditorTypeId>
+          <ParameterSourceTypeId>1</ParameterSourceTypeId>
+          <ParameterTypeId>3</ParameterTypeId>
+          <SortOrder>0</SortOrder>
+          <Value>CommandLineParameters = """" + OutputFilePath + """"
+
+Dim di As New System.IO.DirectoryInfo(FolderWithImages)
+Dim fiArr As System.IO.FileInfo() = di.GetFiles()
+
+' loop through all files in folder, looking for .jpg and .png
+For Each fri As System.IO.FileInfo In fiArr
+    If fri.Extension.ToUpper() = ".PNG" Or fri.Extension.ToUpper() = ".JPG" Or fri.Extension.ToUpper() = ".JPEG" Then
+        CommandLineParameters += " " + """" + fri.FullName + """"
+    End If
+Next fri</Value>
+          <DirectionValue>1</DirectionValue>
+          <IsRequired>true</IsRequired>
+          <Step z:Ref="i13" />
+          <StepParameterTemplateId>130</StepParameterTemplateId>
+          <WorkflowParameter i:nil="true" />
+        </StepParameter>
+      </StepParameters>
+      <StepTypeId>15</StepTypeId>
+      <Steps />
+    </Step>
+  </AllSteps>
+  <RootSteps>
+    <Step z:Ref="i13" />
+    <Step z:Ref="i11" />
+  </RootSteps>
+</DesignerWorkflow>
